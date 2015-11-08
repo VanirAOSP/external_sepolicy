@@ -439,9 +439,9 @@ neverallow ~domain domain:process { transition dyntransition };
 #  mydomain.te:file_type_auto_trans(mydomain, system_data_file, new_file_type)
 #
 ifelse(shipping_build, `true',
-  `neverallow { domain -system_server -system_app -init -installd } system_data_file:file no_w_file_perms;'
+  `neverallow { domain -sysinit -afterboot -system_server -system_app -init -installd } system_data_file:file no_w_file_perms;'
 ,
-  `neverallow { domain -system_server -system_app -init -installd -recovery } system_data_file:file no_w_file_perms;'
+  `neverallow { domain -sysinit -afterboot -system_server -system_app -init -installd -recovery } system_data_file:file no_w_file_perms;'
 )
 
 # do not grant anything greater than r_file_perms and relabelfrom unlink
