@@ -13,6 +13,8 @@ sys.usb.config          u:object_r:system_radio_prop:s0
 ril.                    u:object_r:radio_prop:s0
 gsm.                    u:object_r:radio_prop:s0
 persist.radio           u:object_r:radio_prop:s0
+persist.dbg             u:object_r:radio_prop:s0
+persist.data            u:object_r:radio_prop:s0
 
 net.                    u:object_r:system_prop:s0
 dev.                    u:object_r:system_prop:s0
